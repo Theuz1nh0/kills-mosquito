@@ -1,0 +1,46 @@
+body {
+    background: greenyellow url(./img/bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+.mosquito1 {
+    width: 3.125em;
+    height: 3.125em;
+}
+
+.mosquito2 {
+    width: 4.375em;
+    height: 4.375em;
+}
+
+.mosquito3 {
+    width: 5.625em;
+    height: 5.625em;
+}
+
+.sideB {
+    transform: scaleX(-1);
+}
+
+.panel {
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    width: 11.875em;
+    padding: .625em;
+    border-top: 1px solid white;
+    background-color: white;
+    opacity: .7;
+}
+
+.stopwatch {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background: greenyellow url(./img/bg.jpg) no-repeat;
+        background-size: auto;
+    }
+}
