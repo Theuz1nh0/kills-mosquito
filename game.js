@@ -24,15 +24,16 @@ function randomPosition() {
 
 function randomMosquito() {
     //  remove the previous mosquito if it exists
-    const MOSQUITO_CONTAINER = document.querySelector('#mosquito')
+    const MOSQUITO_CONTAINER = document.querySelector('#mosquito');
 
     if (MOSQUITO_CONTAINER) {
-        MOSQUITO_CONTAINER.remove()
+        MOSQUITO_CONTAINER.remove();
 
         lostHeart()
 
         if (life === 0) {
-            gameOver()
+            gameOver();
+            return;
         }
     }
 
@@ -42,12 +43,12 @@ function randomMosquito() {
     const MOSQUITO = document.createElement('img')
 
     // set the mosquito attributes and styles
-    MOSQUITO.src = './img/mosca.png'
+    MOSQUITO.src = './img/mosca.png';
     MOSQUITO.className = `${randomSize()} ${randomSide()}`;
-    MOSQUITO.style.position = 'absolute'
-    MOSQUITO.style.left = `${POSITION.x}px`
-    MOSQUITO.style.top = `${POSITION.y}px`
-    MOSQUITO.id = 'mosquito'
+    MOSQUITO.style.position = 'absolute';
+    MOSQUITO.style.left = `${POSITION.x}px`;
+    MOSQUITO.style.top = `${POSITION.y}px`;
+    MOSQUITO.id = 'mosquito';
     MOSQUITO.onclick = function () { this.remove() }
 
 
@@ -65,7 +66,7 @@ function randomSize() {
         case 1:
             return 'mosquito2';
         case 2:
-            return 'mosquito3'
+            return 'mosquito3';
     }
 }
 
@@ -94,5 +95,5 @@ function lostHeart() {
 }
 
 function gameOver() {
-    alert('game over')
+    window.location.href = 'game_over.html'
 }
