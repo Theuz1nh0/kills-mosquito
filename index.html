@@ -9,19 +9,6 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
 
-    <script>
-        function gameStart() {
-            const LEVEL = document.querySelector('#level').value
-
-            if (LEVEL === '') {
-                alert('Selecione um nível para iniciar o jogo');
-                return;
-            }
-
-            alert(LEVEL)
-        }
-    </script>
-
     <title>Document</title>
 </head>
 
@@ -53,11 +40,15 @@
         <div class="row">
             <div class="col">
                 <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-danger btn-lg" onclick="gameStart()">Iniciar Jogo</button>
+                    <button type="button" class="btn btn-danger btn-lg" id="btnCheckValue" onclick="gameStart()">Iniciar Jogo</button>
                 </div>
             </div>
         </div>
+
+        <div class="row" id="alertContainer"></div>
     </div>
+
+    <script src="./game_start.js"></script>
 </body>
 
 </html>

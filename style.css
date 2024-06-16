@@ -38,6 +38,23 @@ body {
     font-weight: bold;
 }
 
+
+
+.roll-down {
+    animation: rollDown .15s linear;
+    top: .5em;
+}
+
+@keyframes rollDown {
+    from {
+        top: -50px;
+    }
+    
+    to {
+        top: .5em;
+    }
+}
+
 @media screen and (max-width: 768px) {
     body {
         background: greenyellow url(./img/bg.jpg) no-repeat;
