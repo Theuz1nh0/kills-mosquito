@@ -12,7 +12,7 @@ function gameStart() {
         return;
     }
 
-    showAlert(`Level selecionado: ${level}`, 'success')
+    window.location.href = `app.html?${level}`
 }
 
 const alertContainer = document.querySelector('#alertContainer');
