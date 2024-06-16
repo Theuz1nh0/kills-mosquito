@@ -1,24 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
+
+    <script>
+        function gameStart() {
+            const LEVEL = document.querySelector('#level').value
+
+            if (LEVEL === '') {
+                alert('Selecione um nível para iniciar o jogo');
+                return;
+            }
+
+            alert(LEVEL)
+        }
+    </script>
+
     <title>Document</title>
 </head>
-<body onresize="adjustGameStageSize()">
 
-    <div class="panel">
-        <div class="life">
-            <img class="hearts" src="./img/coracao_cheio.png" alt="symbolic hearts">
-            <img class="hearts" src="./img/coracao_cheio.png" alt="symbolic hearts">
-            <img class="hearts" src="./img/coracao_cheio.png" alt="symbolic hearts">
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <img src="./img/game.png" alt="">
+                </div>
+            </div>
         </div>
 
-        <div class="stopwatch">Tempo restante: <span id="time"></span></div>
-    </div>
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <select id="level" class="form-control">
+                            <option value="">-- Selecione o nível --</option>
+                            <option value="facil">Fácil</option>
+                            <option value="normal">Normal</option>
+                            <option value="dificil">Difícil</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <script src="./game.js"></script>
-    <script src="./run_game.js"></script>
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-danger btn-lg" onclick="gameStart()">Iniciar Jogo</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
