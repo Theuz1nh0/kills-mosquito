@@ -94,6 +94,7 @@ function lostHeart() {
     }
 }
 
+// if game over
 function gameOver() {
     window.location.href = 'game_over.html'
 }

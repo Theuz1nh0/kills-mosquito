@@ -3,6 +3,7 @@ let level = window.location.search;
 let timeLevel = 0;
 level = level.replace('?', '');
 
+// changes mosquito spawn time based on difficulty
 switch(level) {
     case 'facil':
         timeLevel = 1500;
@@ -22,8 +23,10 @@ spanTime.innerHTML = time;
 adjustGameStageSize()
 randomMosquito()
 
+// breeds mosquitoes
 let createMosquito = setInterval(() => randomMosquito(), timeLevel)
 
+// manipulates game time and checks if the player has won
 let stopwatch = setInterval(() => {
     time--
 

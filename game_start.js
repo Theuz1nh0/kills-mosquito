@@ -1,9 +1,11 @@
+// function to check if the level was selected 
 function gameStart() {
     const level = document.querySelector('#level').value
 
     if (level === '') {
         const checkAlert = document.querySelector('#checkAlert');
 
+        // if there is already an alert being shown on the screen, return
         if (checkAlert) {
             return;
         }
@@ -12,9 +14,11 @@ function gameStart() {
         return;
     }
 
+    // run the game
     window.location.href = `app.html?${level}`
 }
 
+// create the alert
 const alertContainer = document.querySelector('#alertContainer');
 function appenAlert(message, type) {
     const wrapper = document.createElement('div');
@@ -31,6 +35,7 @@ function appenAlert(message, type) {
     alertContainer.append(wrapper)
 }
 
+// show and remove the alert
 function showAlert(message, type) {
     appenAlert(message, type);
 
